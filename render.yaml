@@ -19,7 +19,3 @@ services:
         value: admin@nextrec.ai
       - key: ADMIN_PASSWORD
         generateValue: true
-    disk:
-      name: nextrec-db
-      mountPath: /opt/render/project/src/backend
-      sizeGB: 1
