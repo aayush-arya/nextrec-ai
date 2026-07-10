@@ -21,7 +21,8 @@ env/
 *.joblib
 *.npy
 *.h5
-models/
+saved_models/
+ml_models/
 
 # Logs
 *.log
