@@ -1,5 +1,10 @@
 # NextRec — AI-Powered Personalized Recommendation System
 
+![License: MIT](https://img.shields.io/badge/License-MIT-violet.svg)
+![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)
+![React](https://img.shields.io/badge/React-18-61dafb.svg)
+
 > A production-grade, portfolio-quality recommendation platform combining Content-Based Filtering, Collaborative Filtering, Semantic Search, and Hybrid AI to deliver Netflix-level personalization across Movies, Books, Music, Food, Courses and Products.
 
 ---
@@ -254,3 +259,9 @@ pip install scikit-surprise
 ---
 
 Built with FastAPI · React · scikit-learn · scipy · Framer Motion · TailwindCSS
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) — free to use, modify, and distribute.
