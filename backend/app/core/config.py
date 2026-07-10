@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:///./recommendation.db"
     ENVIRONMENT: str = "development"
 
-    CORS_ORIGINS: str = "http://localhost:5173,http://localhost:3000,http://localhost:4173"
+    CORS_ORIGINS: str = "http://localhost:5174,http://localhost:5173,http://localhost:3000"
 
     ADMIN_EMAIL: str = "admin@nextrec.ai"
     ADMIN_PASSWORD: str = "admin123"

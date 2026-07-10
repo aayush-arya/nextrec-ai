@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: nextrec-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:///./recommendation.db
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: ENVIRONMENT
+        value: production
+      - key: ADMIN_EMAIL
+        value: admin@nextrec.ai
+      - key: ADMIN_PASSWORD
+        generateValue: true
+    disk:
+      name: nextrec-db
+      mountPath: /opt/render/project/src/backend
+      sizeGB: 1
