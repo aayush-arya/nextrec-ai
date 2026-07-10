@@ -109,3 +109,18 @@ def get_logs(
         }
         for i in recent_interactions
     ]
+
+
+@router.post("/seed")
+def manual_seed(db: Session = Depends(get_db)):
+    """Force re-seed the database (dev/debug use)."""
+    import traceback
+    try:
+        from data.seed_data import seed_if_empty
+        seed_if_empty()
+        item_count = db.query(Item).count()
+        user_count = db.query(User).count()
+        pipeline.train(db)
+        return {"status": "ok", "items": item_count, "users": user_count}
+    except Exception as e:
+        return {"status": "error", "detail": str(e), "trace": traceback.format_exc()}

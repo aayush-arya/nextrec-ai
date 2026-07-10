@@ -22,7 +22,9 @@ async def lifespan(app: FastAPI):
         from data.seed_data import seed_if_empty
         seed_if_empty()
     except Exception as e:
-        logger.warning(f"Seed step skipped: {e}")
+        import traceback
+        logger.error(f"Seed step FAILED: {e}")
+        logger.error(traceback.format_exc())
 
     logger.info("Auto-training ML pipeline...")
     try:
