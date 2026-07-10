@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_, func
 from typing import List, Optional
 from app.core.database import get_db
-from app.core.dependencies import get_current_user, get_current_admin
+from app.core.dependencies import get_current_admin
 from app.models.item import Item
 from app.models.user import User
 from app.schemas.item import ItemOut, ItemCreate
@@ -24,7 +24,7 @@ def list_items(
     limit: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db),
 ):
-    q = db.query(Item).filter(Item.is_active == True)
+    q = db.query(Item).filter(Item.is_active)
     if domain:
         q = q.filter(Item.domain == domain)
     if genre:
@@ -44,13 +44,13 @@ def list_items(
 
 @router.get("/domains")
 def list_domains(db: Session = Depends(get_db)):
-    results = db.query(Item.domain, func.count(Item.id)).filter(Item.is_active == True).group_by(Item.domain).all()
+    results = db.query(Item.domain, func.count(Item.id)).filter(Item.is_active).group_by(Item.domain).all()
     return [{"domain": d, "count": c} for d, c in results]
 
 
 @router.get("/genres")
 def list_genres(domain: Optional[str] = None, db: Session = Depends(get_db)):
-    q = db.query(Item).filter(Item.is_active == True)
+    q = db.query(Item).filter(Item.is_active)
     if domain:
         q = q.filter(Item.domain == domain)
     items = q.all()
@@ -66,7 +66,7 @@ def list_genres(domain: Optional[str] = None, db: Session = Depends(get_db)):
 
 @router.get("/{item_id}", response_model=ItemOut)
 def get_item(item_id: int, db: Session = Depends(get_db)):
-    item = db.query(Item).filter(Item.id == item_id, Item.is_active == True).first()
+    item = db.query(Item).filter(Item.id == item_id, Item.is_active).first()
     if not item:
         raise HTTPException(status_code=404, detail="Item not found")
     return item
@@ -84,7 +84,7 @@ def get_similar(item_id: int, n: int = 10, db: Session = Depends(get_db)):
         # Fallback: same genre, sorted by rating
         items = (
             db.query(Item)
-            .filter(Item.domain == item.domain, Item.id != item_id, Item.is_active == True)
+            .filter(Item.domain == item.domain, Item.id != item_id, Item.is_active)
             .order_by(Item.avg_rating.desc())
             .limit(n)
             .all()

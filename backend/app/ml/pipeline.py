@@ -46,7 +46,7 @@ class RecommendationPipeline:
         start = datetime.now(timezone.utc)
 
         # Load data
-        items = db.query(Item).filter(Item.is_active == True).all()
+        items = db.query(Item).filter(Item.is_active).all()
         ratings = db.query(Rating).all()
         interactions = db.query(Interaction).all()
 
@@ -126,7 +126,6 @@ class RecommendationPipeline:
         rated_ids: List[int] = []
         if user_id and db:
             from app.models.rating import Rating
-            from app.models.interaction import Interaction
             rated_ids = [r.item_id for r in db.query(Rating).filter(Rating.user_id == user_id).all()]
 
         # Determine algorithm path

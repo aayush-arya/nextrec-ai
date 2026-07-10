@@ -34,7 +34,7 @@ def _build_recommended_items(
         return []
 
     result_ids = [r["item_id"] for r in raw_results[:limit]]
-    items = db.query(Item).filter(Item.id.in_(result_ids), Item.is_active == True).all()
+    items = db.query(Item).filter(Item.id.in_(result_ids), Item.is_active).all()
     id_to_item = {i.id: i for i in items}
 
     output = []

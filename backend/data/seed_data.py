@@ -3,7 +3,8 @@ Seed script — populates the DB with sample items and synthetic ratings.
 Run directly:  python data/seed_data.py
 Or called from main.py lifespan.
 """
-import sys, os
+import sys
+import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from app.core.database import SessionLocal, init_db
@@ -166,7 +167,7 @@ def seed_if_empty():
 
         # Generate synthetic ratings
         items = db.query(Item).all()
-        users = db.query(User).filter(User.is_admin == False).all()
+        users = db.query(User).filter(~User.is_admin).all()
         for user in users:
             sampled = random.sample(items, min(15, len(items)))
             for item in sampled:

@@ -2,7 +2,6 @@
 Trending Recommendation Engine with time-decay scoring.
 Inspired by Netflix / Reddit hot-score algorithms.
 """
-import numpy as np
 import pandas as pd
 from datetime import datetime, timezone
 from typing import List, Dict, Optional

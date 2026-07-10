@@ -2,7 +2,6 @@
 Cold-Start Solver for new users.
 Uses genre/mood preferences + popularity signals to bootstrap recommendations.
 """
-import numpy as np
 import pandas as pd
 from typing import List, Dict, Optional
 import logging

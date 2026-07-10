@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
-from typing import Optional, List
+from typing import Optional
 from app.core.database import get_db
 from app.models.item import Item
 from app.schemas.item import ItemOut
@@ -30,7 +30,7 @@ def search(
 
     # DB keyword fallback / merge
     db_q = db.query(Item).filter(
-        Item.is_active == True,
+        Item.is_active,
         or_(
             Item.title.ilike(f"%{q}%"),
             Item.description.ilike(f"%{q}%"),
@@ -51,7 +51,7 @@ def search(
     all_ids = semantic_ids + [i for i in db_ids if i not in semantic_ids]
 
     # Fetch all
-    all_items = db.query(Item).filter(Item.id.in_(all_ids), Item.is_active == True).all()
+    all_items = db.query(Item).filter(Item.id.in_(all_ids), Item.is_active).all()
     id_map = {i.id: i for i in all_items}
 
     ordered_items = [id_map[i] for i in all_ids if i in id_map]
@@ -85,7 +85,7 @@ def autocomplete(
     db: Session = Depends(get_db),
 ):
     query = db.query(Item.id, Item.title, Item.domain, Item.poster_url).filter(
-        Item.title.ilike(f"{q}%"), Item.is_active == True
+        Item.title.ilike(f"{q}%"), Item.is_active
     )
     if domain:
         query = query.filter(Item.domain == domain)

@@ -29,7 +29,7 @@ def rate_item(
     if not 1.0 <= payload.rating <= 5.0:
         raise HTTPException(status_code=400, detail="Rating must be between 1 and 5")
 
-    item = db.query(Item).filter(Item.id == payload.item_id, Item.is_active == True).first()
+    item = db.query(Item).filter(Item.id == payload.item_id, Item.is_active).first()
     if not item:
         raise HTTPException(status_code=404, detail="Item not found")
 

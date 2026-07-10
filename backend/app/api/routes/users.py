@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from typing import List
 from app.core.database import get_db
@@ -107,7 +107,6 @@ def get_user_stats(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    from sqlalchemy import func
     ratings = db.query(Rating).filter(Rating.user_id == current_user.id).all()
     total_ratings = len(ratings)
     avg_given = sum(r.rating for r in ratings) / total_ratings if total_ratings else 0

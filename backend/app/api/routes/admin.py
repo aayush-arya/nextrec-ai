@@ -18,12 +18,12 @@ def get_stats(
     _: User = Depends(get_current_admin),
 ):
     total_users = db.query(User).count()
-    total_items = db.query(Item).filter(Item.is_active == True).count()
+    total_items = db.query(Item).filter(Item.is_active).count()
     total_ratings = db.query(Rating).count()
     total_interactions = db.query(Interaction).count()
 
-    domain_dist = db.query(Item.domain, func.count(Item.id)).filter(Item.is_active == True).group_by(Item.domain).all()
-    genre_dist_raw = db.query(Item.genre, func.count(Item.id)).filter(Item.is_active == True, Item.genre != "").group_by(Item.genre).order_by(func.count(Item.id).desc()).limit(10).all()
+    domain_dist = db.query(Item.domain, func.count(Item.id)).filter(Item.is_active).group_by(Item.domain).all()
+    genre_dist_raw = db.query(Item.genre, func.count(Item.id)).filter(Item.is_active, Item.genre != "").group_by(Item.genre).order_by(func.count(Item.id).desc()).limit(10).all()
 
     avg_rating = db.query(func.avg(Rating.rating)).scalar()
     rating_dist = db.query(func.round(Rating.rating), func.count(Rating.id)).group_by(func.round(Rating.rating)).all()
