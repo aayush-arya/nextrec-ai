@@ -71,6 +71,15 @@ COURSES = [
     {"title":"Python for Data Science and Machine Learning Bootcamp","genres":["Python","Data Science","Machine Learning"],"description":"Learn how to use NumPy, Pandas, Seaborn, Matplotlib, Plotly, Scikit-Learn, Machine Learning, Tensorflow, and more!","metadata_json":{"instructor":"Jose Portilla","platform":"Udemy","difficulty":"Intermediate","mood":["practical","data-focused"]},"release_year":2022,"duration":"25 hours","avg_rating":4.7,"total_ratings":850,"poster_url":"https://img-c.udemycdn.com/course/480x270/903744_8eb2.jpg"},
     {"title":"React - The Complete Guide","genres":["React","JavaScript","Web Development"],"description":"Dive in and learn React.js from scratch! Learn Reactjs, Hooks, Redux, React Router, Next.js, Best Practices and way more!","metadata_json":{"instructor":"Maximilian Schwarzmüller","platform":"Udemy","difficulty":"Intermediate","mood":["modern","comprehensive"]},"release_year":2023,"duration":"68 hours","avg_rating":4.8,"total_ratings":920,"poster_url":"https://img-c.udemycdn.com/course/480x270/1362070_b9a1_2.jpg"},
     {"title":"Deep Learning Specialization","genres":["Deep Learning","Neural Networks","AI"],"description":"Become an expert in neural networks, deep learning architectures and their applications in computer vision, NLP, and more.","metadata_json":{"instructor":"Andrew Ng","platform":"Coursera","difficulty":"Advanced","mood":["rigorous","theoretical"]},"release_year":2021,"duration":"4 months","avg_rating":4.9,"total_ratings":780,"poster_url":"https://img-c.udemycdn.com/course/480x270/2796760_5e67_10.jpg"},
+    {"title":"The Complete JavaScript Course 2024","genres":["JavaScript","Web Development","Programming"],"description":"The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. From beginner to expert in just one course.","metadata_json":{"instructor":"Jonas Schmedtmann","platform":"Udemy","difficulty":"Beginner","mood":["comprehensive","practical","modern"]},"release_year":2023,"duration":"69 hours","avg_rating":4.8,"total_ratings":1050,"poster_url":"https://img-c.udemycdn.com/course/480x270/851712_fc61_6.jpg"},
+    {"title":"AWS Certified Solutions Architect","genres":["Cloud","AWS","DevOps"],"description":"Pass the AWS Solutions Architect Associate exam with flying colors! Covers EC2, S3, RDS, VPC, IAM, CloudFormation and all core AWS services.","metadata_json":{"instructor":"Stephane Maarek","platform":"Udemy","difficulty":"Intermediate","mood":["career-focused","technical","cloud"]},"release_year":2023,"duration":"27 hours","avg_rating":4.7,"total_ratings":890,"poster_url":"https://img-c.udemycdn.com/course/480x270/362328_91f3_10.jpg"},
+    {"title":"Docker & Kubernetes: The Complete Guide","genres":["DevOps","Docker","Kubernetes"],"description":"Build, test, and deploy Docker applications with Kubernetes while learning production-style development workflows and CI/CD pipelines.","metadata_json":{"instructor":"Stephen Grider","platform":"Udemy","difficulty":"Intermediate","mood":["hands-on","devops","systematic"]},"release_year":2023,"duration":"22 hours","avg_rating":4.6,"total_ratings":740,"poster_url":"https://img-c.udemycdn.com/course/480x270/1793828_7999_2.jpg"},
+    {"title":"UI/UX Design Bootcamp","genres":["Design","UI/UX","Figma"],"description":"Learn user experience design, wireframing, prototyping and Figma from scratch. Build a professional portfolio with real-world projects.","metadata_json":{"instructor":"Daniel Walter Scott","platform":"Udemy","difficulty":"Beginner","mood":["creative","visual","practical"]},"release_year":2023,"duration":"40 hours","avg_rating":4.7,"total_ratings":680,"poster_url":"https://img-c.udemycdn.com/course/480x270/1641458_3c30.jpg"},
+    {"title":"Complete SQL & Databases Bootcamp","genres":["SQL","Databases","Data Engineering"],"description":"Zero to Hero in SQL — master PostgreSQL, MySQL and database design. Learn complex queries, window functions, and performance optimization.","metadata_json":{"instructor":"Jose Portilla","platform":"Udemy","difficulty":"Beginner","mood":["structured","data-focused","career-ready"]},"release_year":2022,"duration":"22 hours","avg_rating":4.6,"total_ratings":720,"poster_url":"https://img-c.udemycdn.com/course/480x270/703764_4a4a_8.jpg"},
+    {"title":"Flutter & Dart - The Complete App Development Course","genres":["Flutter","Mobile Development","Dart"],"description":"A complete guide to the Flutter SDK and Flutter Framework for building native iOS and Android apps with one codebase.","metadata_json":{"instructor":"Maximilian Schwarzmüller","platform":"Udemy","difficulty":"Intermediate","mood":["cross-platform","modern","hands-on"]},"release_year":2023,"duration":"42 hours","avg_rating":4.7,"total_ratings":660,"poster_url":"https://img-c.udemycdn.com/course/480x270/1708340_7108_3.jpg"},
+    {"title":"TypeScript: The Complete Developer's Guide","genres":["TypeScript","JavaScript","Web Development"],"description":"Master TypeScript by building real-world applications. Covers generics, decorators, design patterns, and integrating TS with React and Node.","metadata_json":{"instructor":"Stephen Grider","platform":"Udemy","difficulty":"Intermediate","mood":["typed","professional","modern"]},"release_year":2022,"duration":"27 hours","avg_rating":4.6,"total_ratings":580,"poster_url":"https://img-c.udemycdn.com/course/480x270/947098_02ec_3.jpg"},
+    {"title":"Data Structures and Algorithms Masterclass","genres":["Algorithms","Computer Science","Interviews"],"description":"Ace your coding interviews! Master every major data structure and algorithm with animated visualizations and 100+ practice problems.","metadata_json":{"instructor":"Colt Steele","platform":"Udemy","difficulty":"Intermediate","mood":["rigorous","interview-prep","systematic"]},"release_year":2022,"duration":"21 hours","avg_rating":4.8,"total_ratings":920,"poster_url":"https://img-c.udemycdn.com/course/480x270/1707986_a49d_2.jpg"},
+    {"title":"ChatGPT & AI Prompt Engineering Masterclass","genres":["AI","ChatGPT","Prompt Engineering"],"description":"Learn to harness the power of ChatGPT, Midjourney, and other AI tools. Build AI-powered apps and automate tasks with advanced prompting techniques.","metadata_json":{"instructor":"Andrew Ng","platform":"DeepLearning.AI","difficulty":"Beginner","mood":["cutting-edge","practical","creative"]},"release_year":2023,"duration":"8 hours","avg_rating":4.7,"total_ratings":1100,"poster_url":"https://img-c.udemycdn.com/course/480x270/5264027_2ce9.jpg"},
 ]
 
 FOOD = [
@@ -79,18 +88,42 @@ FOOD = [
     {"title":"Sushi Platter","genres":["Japanese","Seafood","Raw"],"description":"An elegant arrangement of nigiri, maki rolls, and sashimi showcasing the freshest fish with perfectly seasoned rice.","metadata_json":{"cuisine":"Japanese","dietary":["gluten-free"],"spice_level":"mild","mood":["fresh","refined","umami"]},"release_year":1820,"duration":"30 min prep","avg_rating":4.8,"total_ratings":640,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg"},
     {"title":"Beef Tacos","genres":["Mexican","Street Food","Non-Vegetarian"],"description":"Crispy corn tortillas loaded with seasoned ground beef, fresh pico de gallo, shredded cheese, and a drizzle of lime crema.","metadata_json":{"cuisine":"Mexican","dietary":[],"spice_level":"medium","mood":["fun","casual","spicy"]},"release_year":1900,"duration":"25 min","avg_rating":4.6,"total_ratings":590,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"},
     {"title":"Pasta Carbonara","genres":["Italian","Pasta","Non-Vegetarian"],"description":"The authentic Roman pasta dish made with eggs, Pecorino Romano, guanciale, and black pepper — creamy without a drop of cream.","metadata_json":{"cuisine":"Italian","dietary":[],"spice_level":"mild","mood":["rich","comfort","classic"]},"release_year":1944,"duration":"20 min","avg_rating":4.8,"total_ratings":610,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/3/33/Fresh_made_pasta_carbonara.jpg"},
+    {"title":"Ramen","genres":["Japanese","Noodles","Comfort Food"],"description":"A rich, steaming bowl of Japanese noodle soup with a complex broth, tender chashu pork, soft-boiled egg, nori, and bamboo shoots.","metadata_json":{"cuisine":"Japanese","dietary":[],"spice_level":"mild","mood":["warming","comfort","umami"]},"release_year":1900,"duration":"3 hr prep","avg_rating":4.9,"total_ratings":760,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Shoyu_Ramen.jpg/640px-Shoyu_Ramen.jpg"},
+    {"title":"Pad Thai","genres":["Thai","Noodles","Street Food"],"description":"Thailand's most beloved noodle dish — stir-fried rice noodles with shrimp, tofu, eggs, bean sprouts, peanuts and a tamarind-fish sauce.","metadata_json":{"cuisine":"Thai","dietary":[],"spice_level":"medium","mood":["vibrant","tangy","satisfying"]},"release_year":1940,"duration":"20 min","avg_rating":4.7,"total_ratings":690,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Pad_thai_kung_Chang_Khien_street_stall.jpg/640px-Pad_thai_kung_Chang_Khien_street_stall.jpg"},
+    {"title":"Biryani","genres":["Indian","Rice","Non-Vegetarian"],"description":"Fragrant basmati rice layered with spiced meat, caramelized onions, saffron, and aromatics — slow-cooked in the dum style for maximum flavour.","metadata_json":{"cuisine":"Indian","dietary":[],"spice_level":"medium-hot","mood":["festive","aromatic","rich"]},"release_year":1600,"duration":"90 min","avg_rating":4.9,"total_ratings":810,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Hyderabadi_Biryani.jpg/640px-Hyderabadi_Biryani.jpg"},
+    {"title":"Croissant","genres":["French","Bakery","Vegetarian"],"description":"Flaky, buttery, golden-brown French pastry made with laminated dough — a breakfast staple beloved worldwide for its crisp exterior and airy interior.","metadata_json":{"cuisine":"French","dietary":["vegetarian"],"spice_level":"none","mood":["indulgent","cozy","morning"]},"release_year":1839,"duration":"3 hr prep","avg_rating":4.6,"total_ratings":550,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2007-02-10_Croissant.jpg/640px-2007-02-10_Croissant.jpg"},
+    {"title":"Caesar Salad","genres":["American","Salad","Vegetarian"],"description":"Crisp romaine lettuce, homemade Caesar dressing, sourdough croutons, and shaved Parmesan — the gold standard of salads since 1924.","metadata_json":{"cuisine":"American","dietary":["vegetarian"],"spice_level":"mild","mood":["fresh","light","classic"]},"release_year":1924,"duration":"15 min","avg_rating":4.5,"total_ratings":480,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Caesar_salad_%281%29.jpg/640px-Caesar_salad_%281%29.jpg"},
+    {"title":"Chocolate Lava Cake","genres":["Dessert","French","Vegetarian"],"description":"A warm, individual chocolate cake with a molten fudgy centre that flows like liquid lava when you cut into it — served with vanilla ice cream.","metadata_json":{"cuisine":"French","dietary":["vegetarian"],"spice_level":"none","mood":["indulgent","romantic","decadent"]},"release_year":1981,"duration":"25 min","avg_rating":4.8,"total_ratings":570,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Moelleux_au_chocolat.jpg/640px-Moelleux_au_chocolat.jpg"},
+    {"title":"BBQ Ribs","genres":["American","BBQ","Non-Vegetarian"],"description":"Slow-smoked pork spare ribs coated in a sticky-sweet dry rub, fall-off-the-bone tender after 6 hours in the smoker and finished with tangy BBQ sauce.","metadata_json":{"cuisine":"American","dietary":[],"spice_level":"medium","mood":["hearty","smoky","indulgent"]},"release_year":1800,"duration":"6 hr smoke","avg_rating":4.8,"total_ratings":630,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Smoked_Pork_Spare_Ribs.jpg/640px-Smoked_Pork_Spare_Ribs.jpg"},
+    {"title":"Dim Sum","genres":["Chinese","Cantonese","Brunch"],"description":"A traditional Cantonese brunch experience featuring har gow, siu mai, char siu bao, and turnip cakes — served in bamboo steamers with pu-erh tea.","metadata_json":{"cuisine":"Chinese","dietary":[],"spice_level":"mild","mood":["social","traditional","umami"]},"release_year":700,"duration":"45 min prep","avg_rating":4.7,"total_ratings":520,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dim_sum_meal.jpg/640px-Dim_sum_meal.jpg"},
+    {"title":"Acai Bowl","genres":["Brazilian","Healthy","Vegan"],"description":"Thick blended acai with banana, topped with fresh fruits, granola, honey, coconut flakes and nut butter — a nutrient-dense Brazilian superfood bowl.","metadata_json":{"cuisine":"Brazilian","dietary":["vegan","gluten-free"],"spice_level":"none","mood":["energizing","fresh","healthy"]},"release_year":1970,"duration":"10 min","avg_rating":4.5,"total_ratings":440,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Acai_bowl.jpg/640px-Acai_bowl.jpg"},
+    {"title":"Shakshuka","genres":["Middle Eastern","Eggs","Vegetarian"],"description":"Poached eggs in a spiced tomato and pepper sauce with cumin, paprika, and chilli — a one-pan Middle Eastern breakfast served with crusty bread.","metadata_json":{"cuisine":"Middle Eastern","dietary":["vegetarian"],"spice_level":"medium","mood":["warming","brunch","vibrant"]},"release_year":1500,"duration":"25 min","avg_rating":4.6,"total_ratings":490,"poster_url":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Shakshuka_3.jpg/640px-Shakshuka_3.jpg"},
 ]
 
 PRODUCTS = [
-    {"title":"Sony WH-1000XM5 Headphones","genres":["Electronics","Audio","Wireless"],"description":"Industry-leading noise cancellation with 8 microphones, exceptional sound quality, 30-hour battery life, and multi-device pairing.","metadata_json":{"brand":"Sony","category":"Audio","price":379.99,"mood":["premium","focused","music"]},"release_year":2022,"duration":"30 hr battery","avg_rating":4.8,"total_ratings":1100,"poster_url":"https://www.sony.com/image/WH1000XM5_main.jpg"},
-    {"title":"Apple MacBook Pro M3","genres":["Laptops","Computers","Apple"],"description":"Blazing fast M3 chip, stunning Liquid Retina XDR display, up to 22 hours battery life, and the best webcam ever in a Mac notebook.","metadata_json":{"brand":"Apple","category":"Computers","price":1999.99,"mood":["professional","premium","creative"]},"release_year":2023,"duration":"22 hr battery","avg_rating":4.9,"total_ratings":860,"poster_url":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-14-spacegray-select-202310.jpg"},
+    {"title":"Sony WH-1000XM5 Headphones","genres":["Electronics","Audio","Wireless"],"description":"Industry-leading noise cancellation with 8 microphones, exceptional sound quality, 30-hour battery life, and multi-device pairing.","metadata_json":{"brand":"Sony","category":"Audio","price":379.99,"mood":["premium","focused","music"]},"release_year":2022,"duration":"30 hr battery","avg_rating":4.8,"total_ratings":1100,"poster_url":"https://m.media-amazon.com/images/I/61bPFMfAMGL.jpg"},
+    {"title":"Apple MacBook Pro M3","genres":["Laptops","Computers","Apple"],"description":"Blazing fast M3 chip, stunning Liquid Retina XDR display, up to 22 hours battery life, and the best webcam ever in a Mac notebook.","metadata_json":{"brand":"Apple","category":"Computers","price":1999.99,"mood":["professional","premium","creative"]},"release_year":2023,"duration":"22 hr battery","avg_rating":4.9,"total_ratings":860,"poster_url":"https://m.media-amazon.com/images/I/71jG+e7roXL.jpg"},
     {"title":"Kindle Paperwhite","genres":["E-Readers","Books","Electronics"],"description":"Thinner, lighter, with a 6.8\" display and adjustable warm light for the ultimate reading experience. Waterproof with weeks of battery life.","metadata_json":{"brand":"Amazon","category":"E-Readers","price":139.99,"mood":["reading","relaxing","focused"]},"release_year":2021,"duration":"10 week battery","avg_rating":4.7,"total_ratings":940,"poster_url":"https://m.media-amazon.com/images/I/61Ww4abGclL.jpg"},
+    {"title":"iPhone 15 Pro","genres":["Smartphones","Apple","Photography"],"description":"Titanium design, A17 Pro chip, 48MP main camera with 5x telephoto, USB 3 speeds, and Action Button. The most powerful iPhone ever made.","metadata_json":{"brand":"Apple","category":"Smartphones","price":999.99,"mood":["premium","photography","cutting-edge"]},"release_year":2023,"duration":"Up to 23 hr video","avg_rating":4.8,"total_ratings":1200,"poster_url":"https://m.media-amazon.com/images/I/61gPH2m1cKL.jpg"},
+    {"title":"AirPods Pro 2nd Generation","genres":["Audio","Apple","Wireless"],"description":"Active Noise Cancellation 2x more powerful than before, Adaptive Transparency, Personalized Spatial Audio, and USB-C charging case.","metadata_json":{"brand":"Apple","category":"Audio","price":249.99,"mood":["premium","music","wireless"]},"release_year":2023,"duration":"6 hr (30 hr case)","avg_rating":4.7,"total_ratings":980,"poster_url":"https://m.media-amazon.com/images/I/61SUj2aKoEL.jpg"},
+    {"title":"Samsung 65\" 4K QLED TV","genres":["TVs","Samsung","Entertainment"],"description":"Quantum Dot technology delivers 100% colour volume, Neo Quantum Processor 4K, and Anti-Reflection panel for cinema-quality picture in any room.","metadata_json":{"brand":"Samsung","category":"TVs","price":1297.99,"mood":["entertainment","cinematic","immersive"]},"release_year":2023,"duration":"N/A","avg_rating":4.7,"total_ratings":760,"poster_url":"https://m.media-amazon.com/images/I/71YCNF6GXML.jpg"},
+    {"title":"Nintendo Switch OLED","genres":["Gaming","Nintendo","Portable"],"description":"Vivid 7-inch OLED screen, enhanced audio, 64GB internal storage, and a wide adjustable stand — the ultimate hybrid gaming console.","metadata_json":{"brand":"Nintendo","category":"Gaming","price":349.99,"mood":["fun","gaming","portable"]},"release_year":2021,"duration":"4.5-9 hr battery","avg_rating":4.8,"total_ratings":1050,"poster_url":"https://m.media-amazon.com/images/I/81mM7jeoAEL.jpg"},
+    {"title":"GoPro Hero 12 Black","genres":["Cameras","Action","Adventure"],"description":"5.3K video, HyperSmooth 6.0 stabilization, waterproof to 33ft, up to 2.7 hour enduro battery life — capture every adventure in stunning clarity.","metadata_json":{"brand":"GoPro","category":"Cameras","price":399.99,"mood":["adventure","action","travel"]},"release_year":2023,"duration":"2.7 hr battery","avg_rating":4.6,"total_ratings":680,"poster_url":"https://m.media-amazon.com/images/I/61vfLxp-J-L.jpg"},
+    {"title":"Logitech MX Master 3S Mouse","genres":["Peripherals","Productivity","Wireless"],"description":"Ultra-fast MagSpeed scroll wheel, 8K DPI precision sensor, quiet clicks, ergonomic comfort, and USB-C charging. Works on any surface.","metadata_json":{"brand":"Logitech","category":"Peripherals","price":99.99,"mood":["productive","ergonomic","professional"]},"release_year":2022,"duration":"70 day battery","avg_rating":4.7,"total_ratings":870,"poster_url":"https://m.media-amazon.com/images/I/61mT0MPxRLL.jpg"},
+    {"title":"Keychron K2 Mechanical Keyboard","genres":["Peripherals","Keyboards","Mechanical"],"description":"Tenkeyless wireless mechanical keyboard with RGB backlight, hot-swappable switches, aluminum frame, and multi-device Bluetooth 5.1 connectivity.","metadata_json":{"brand":"Keychron","category":"Keyboards","price":89.99,"mood":["typing","productive","satisfying"]},"release_year":2022,"duration":"240 hr battery","avg_rating":4.6,"total_ratings":720,"poster_url":"https://m.media-amazon.com/images/I/71EbNJOBksL.jpg"},
+    {"title":"Dyson V15 Detect Cordless Vacuum","genres":["Home","Cleaning","Dyson"],"description":"Laser reveals invisible dust. Powerful suction intelligently adapts to different floor types. HEPA filtration captures 99.99% of particles.","metadata_json":{"brand":"Dyson","category":"Home Appliances","price":699.99,"mood":["clean","satisfying","smart"]},"release_year":2022,"duration":"60 min battery","avg_rating":4.7,"total_ratings":810,"poster_url":"https://m.media-amazon.com/images/I/61-5d1wqLKL.jpg"},
+    {"title":"iPad Air M2","genres":["Tablets","Apple","Productivity"],"description":"Supercharged by the M2 chip, stunning 10.9\" Liquid Retina display, compatible with Apple Pencil and Magic Keyboard for ultimate versatility.","metadata_json":{"brand":"Apple","category":"Tablets","price":599.99,"mood":["creative","portable","productive"]},"release_year":2024,"duration":"10 hr battery","avg_rating":4.8,"total_ratings":740,"poster_url":"https://m.media-amazon.com/images/I/61mMyTxqIIL.jpg"},
+    {"title":"Anker 737 Power Bank 24000mAh","genres":["Accessories","Power","Portable"],"description":"140W max output, bi-directional fast charging, smart display showing wattage and battery percentage. Charge a MacBook Pro and phone simultaneously.","metadata_json":{"brand":"Anker","category":"Accessories","price":119.99,"mood":["practical","travel","reliable"]},"release_year":2022,"duration":"24000mAh","avg_rating":4.6,"total_ratings":650,"poster_url":"https://m.media-amazon.com/images/I/61bnO5cXb8L.jpg"},
 ]
 
 # ─── Seeder ──────────────────────────────────────────────────────────────────
 
-def _create_items(db, domain, data_list, genre_key="genres"):
+def _create_items(db, domain, data_list, existing=None):
+    added = 0
     for d in data_list:
+        key = (d["title"], domain)
+        if existing is not None and key in existing:
+            continue
         item = Item(
             title=d["title"],
             domain=domain,
@@ -111,15 +144,16 @@ def _create_items(db, domain, data_list, genre_key="genres"):
             is_trending=d.get("total_ratings",0) >= 900,
         )
         db.add(item)
+        added += 1
+    return added
 
 
 def seed_if_empty():
     init_db()
     db = SessionLocal()
     try:
-        if db.query(Item).count() > 0:
-            print("Database already seeded, skipping.")
-            return
+        existing = {(i.title, i.domain) for i in db.query(Item.title, Item.domain).all()}
+        is_fresh = len(existing) == 0
 
         print("Seeding database...")
 
@@ -156,38 +190,41 @@ def seed_if_empty():
 
         db.commit()
 
-        # Seed items
-        _create_items(db, "movies", MOVIES)
-        _create_items(db, "books", BOOKS)
-        _create_items(db, "music", MUSIC)
-        _create_items(db, "courses", COURSES)
-        _create_items(db, "food", FOOD)
-        _create_items(db, "products", PRODUCTS)
+        # Seed items (skip existing by title+domain)
+        new_count = 0
+        new_count += _create_items(db, "movies", MOVIES, existing)
+        new_count += _create_items(db, "books", BOOKS, existing)
+        new_count += _create_items(db, "music", MUSIC, existing)
+        new_count += _create_items(db, "courses", COURSES, existing)
+        new_count += _create_items(db, "food", FOOD, existing)
+        new_count += _create_items(db, "products", PRODUCTS, existing)
         db.commit()
+        print(f"Added {new_count} new items.")
 
-        # Generate synthetic ratings
-        items = db.query(Item).all()
-        users = db.query(User).filter(~User.is_admin).all()
-        for user in users:
-            sampled = random.sample(items, min(15, len(items)))
-            for item in sampled:
-                domain_pref = item.domain in (user.preferred_domains or [])
-                base = 4.0 if domain_pref else 3.0
-                noise = random.uniform(-0.5, 1.0)
-                rating_val = max(1.0, min(5.0, round(base + noise, 1)))
-                db.add(Rating(user_id=user.id, item_id=item.id, rating=rating_val))
-        db.commit()
+        if is_fresh:
+            # Generate synthetic ratings only on first seed
+            items = db.query(Item).all()
+            users = db.query(User).filter(~User.is_admin).all()
+            for user in users:
+                sampled = random.sample(items, min(15, len(items)))
+                for item in sampled:
+                    domain_pref = item.domain in (user.preferred_domains or [])
+                    base = 4.0 if domain_pref else 3.0
+                    noise = random.uniform(-0.5, 1.0)
+                    rating_val = max(1.0, min(5.0, round(base + noise, 1)))
+                    db.add(Rating(user_id=user.id, item_id=item.id, rating=rating_val))
+            db.commit()
 
-        # Refresh popularity scores
-        for item in items:
-            ratings = db.query(Rating).filter(Rating.item_id == item.id).all()
-            if ratings:
-                item.total_ratings = len(ratings)
-                item.avg_rating = round(sum(r.rating for r in ratings) / len(ratings), 2)
-                item.popularity_score = round(item.total_ratings * item.avg_rating / 5.0, 2)
-        db.commit()
+            # Refresh popularity scores
+            for item in items:
+                ratings = db.query(Rating).filter(Rating.item_id == item.id).all()
+                if ratings:
+                    item.total_ratings = len(ratings)
+                    item.avg_rating = round(sum(r.rating for r in ratings) / len(ratings), 2)
+                    item.popularity_score = round(item.total_ratings * item.avg_rating / 5.0, 2)
+            db.commit()
 
-        print(f"Seeded {db.query(Item).count()} items, {db.query(User).count()} users, {db.query(Rating).count()} ratings.")
+        print(f"Done: {db.query(Item).count()} items, {db.query(User).count()} users, {db.query(Rating).count()} ratings.")
 
     finally:
         db.close()
