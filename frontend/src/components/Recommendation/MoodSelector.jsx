@@ -2,24 +2,22 @@ import { motion } from 'framer-motion'
 import useUIStore from '../../store/uiStore'
 
 const MOODS = [
-  // Row 1 — original
-  { key: 'happy',        label: 'Happy',        emoji: '😊', color: 'hover:border-yellow-400/60 hover:bg-yellow-500/10 data-[active=true]:border-yellow-400 data-[active=true]:bg-yellow-500/10' },
-  { key: 'funny',        label: 'Funny',        emoji: '😂', color: 'hover:border-violet-400/60 hover:bg-violet-500/10 data-[active=true]:border-violet-400 data-[active=true]:bg-violet-500/10' },
-  { key: 'romantic',     label: 'Romantic',     emoji: '❤️',  color: 'hover:border-pink-400/60 hover:bg-pink-500/10 data-[active=true]:border-pink-400 data-[active=true]:bg-pink-500/10' },
-  { key: 'emotional',    label: 'Emotional',    emoji: '😢', color: 'hover:border-blue-400/60 hover:bg-blue-500/10 data-[active=true]:border-blue-400 data-[active=true]:bg-blue-500/10' },
-  { key: 'thriller',     label: 'Thriller',     emoji: '😱', color: 'hover:border-red-400/60 hover:bg-red-500/10 data-[active=true]:border-red-400 data-[active=true]:bg-red-500/10' },
-  { key: 'motivational', label: 'Motivated',    emoji: '💪', color: 'hover:border-orange-400/60 hover:bg-orange-500/10 data-[active=true]:border-orange-400 data-[active=true]:bg-orange-500/10' },
-  { key: 'adventure',    label: 'Adventure',    emoji: '🌍', color: 'hover:border-emerald-400/60 hover:bg-emerald-500/10 data-[active=true]:border-emerald-400 data-[active=true]:bg-emerald-500/10' },
-  { key: 'relaxed',      label: 'Relaxed',      emoji: '😴', color: 'hover:border-teal-400/60 hover:bg-teal-500/10 data-[active=true]:border-teal-400 data-[active=true]:bg-teal-500/10' },
-  // Row 2 — new
-  { key: 'energetic',    label: 'Energetic',    emoji: '⚡', color: 'hover:border-lime-400/60 hover:bg-lime-500/10 data-[active=true]:border-lime-400 data-[active=true]:bg-lime-500/10' },
-  { key: 'chill',        label: 'Chill',        emoji: '🌊', color: 'hover:border-sky-400/60 hover:bg-sky-500/10 data-[active=true]:border-sky-400 data-[active=true]:bg-sky-500/10' },
-  { key: 'nostalgic',    label: 'Nostalgic',    emoji: '🕰️', color: 'hover:border-amber-400/60 hover:bg-amber-500/10 data-[active=true]:border-amber-400 data-[active=true]:bg-amber-500/10' },
-  { key: 'epic',         label: 'Epic',         emoji: '🔥', color: 'hover:border-red-500/60 hover:bg-red-500/10 data-[active=true]:border-red-500 data-[active=true]:bg-red-500/10' },
-  { key: 'focused',      label: 'Focused',      emoji: '🎯', color: 'hover:border-cyan-400/60 hover:bg-cyan-500/10 data-[active=true]:border-cyan-400 data-[active=true]:bg-cyan-500/10' },
-  { key: 'curious',      label: 'Curious',      emoji: '🔭', color: 'hover:border-indigo-400/60 hover:bg-indigo-500/10 data-[active=true]:border-indigo-400 data-[active=true]:bg-indigo-500/10' },
-  { key: 'dreamy',       label: 'Dreamy',       emoji: '🌙', color: 'hover:border-purple-400/60 hover:bg-purple-500/10 data-[active=true]:border-purple-400 data-[active=true]:bg-purple-500/10' },
-  { key: 'dark',         label: 'Dark',         emoji: '🌑', color: 'hover:border-slate-400/60 hover:bg-slate-500/10 data-[active=true]:border-slate-400 data-[active=true]:bg-slate-500/10' },
+  { key: 'happy',        label: 'Happy',      emoji: '😊', glow: 'rgba(250,204,21,0.35)',  border: 'rgba(250,204,21,0.5)',  bg: 'rgba(250,204,21,0.1)' },
+  { key: 'funny',        label: 'Funny',      emoji: '😂', glow: 'rgba(167,139,250,0.35)', border: 'rgba(167,139,250,0.5)', bg: 'rgba(167,139,250,0.1)' },
+  { key: 'romantic',     label: 'Romantic',   emoji: '❤️', glow: 'rgba(244,114,182,0.35)', border: 'rgba(244,114,182,0.5)', bg: 'rgba(244,114,182,0.1)' },
+  { key: 'emotional',    label: 'Emotional',  emoji: '😢', glow: 'rgba(96,165,250,0.35)',  border: 'rgba(96,165,250,0.5)',  bg: 'rgba(96,165,250,0.1)' },
+  { key: 'thriller',     label: 'Thriller',   emoji: '😱', glow: 'rgba(248,113,113,0.35)', border: 'rgba(248,113,113,0.5)', bg: 'rgba(248,113,113,0.1)' },
+  { key: 'motivational', label: 'Motivated',  emoji: '💪', glow: 'rgba(251,146,60,0.35)',  border: 'rgba(251,146,60,0.5)',  bg: 'rgba(251,146,60,0.1)' },
+  { key: 'adventure',    label: 'Adventure',  emoji: '🌍', glow: 'rgba(52,211,153,0.35)',  border: 'rgba(52,211,153,0.5)',  bg: 'rgba(52,211,153,0.1)' },
+  { key: 'relaxed',      label: 'Relaxed',    emoji: '😴', glow: 'rgba(45,212,191,0.35)',  border: 'rgba(45,212,191,0.5)',  bg: 'rgba(45,212,191,0.1)' },
+  { key: 'energetic',    label: 'Energetic',  emoji: '⚡', glow: 'rgba(163,230,53,0.35)',  border: 'rgba(163,230,53,0.5)',  bg: 'rgba(163,230,53,0.1)' },
+  { key: 'chill',        label: 'Chill',      emoji: '🌊', glow: 'rgba(56,189,248,0.35)',  border: 'rgba(56,189,248,0.5)',  bg: 'rgba(56,189,248,0.1)' },
+  { key: 'nostalgic',    label: 'Nostalgic',  emoji: '🕰️', glow: 'rgba(251,191,36,0.35)',  border: 'rgba(251,191,36,0.5)',  bg: 'rgba(251,191,36,0.1)' },
+  { key: 'epic',         label: 'Epic',       emoji: '🔥', glow: 'rgba(239,68,68,0.35)',   border: 'rgba(239,68,68,0.5)',   bg: 'rgba(239,68,68,0.1)' },
+  { key: 'focused',      label: 'Focused',    emoji: '🎯', glow: 'rgba(34,211,238,0.35)',  border: 'rgba(34,211,238,0.5)',  bg: 'rgba(34,211,238,0.1)' },
+  { key: 'curious',      label: 'Curious',    emoji: '🔭', glow: 'rgba(129,140,248,0.35)', border: 'rgba(129,140,248,0.5)', bg: 'rgba(129,140,248,0.1)' },
+  { key: 'dreamy',       label: 'Dreamy',     emoji: '🌙', glow: 'rgba(192,132,252,0.35)', border: 'rgba(192,132,252,0.5)', bg: 'rgba(192,132,252,0.1)' },
+  { key: 'dark',         label: 'Dark',       emoji: '🌑', glow: 'rgba(148,163,184,0.25)', border: 'rgba(148,163,184,0.4)', bg: 'rgba(148,163,184,0.08)' },
 ]
 
 export default function MoodSelector() {
@@ -27,20 +25,38 @@ export default function MoodSelector() {
 
   return (
     <div className="flex gap-2 flex-wrap">
-      {MOODS.map((mood) => (
-        <motion.button
-          key={mood.key}
-          whileTap={{ scale: 0.92 }}
-          whileHover={{ y: -1 }}
-          data-active={activeMood === mood.key}
-          onClick={() => setActiveMood(activeMood === mood.key ? null : mood.key)}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-zinc-700
-                     text-xs font-medium text-zinc-300 transition-all duration-200 ${mood.color}`}
-        >
-          <span>{mood.emoji}</span>
-          <span>{mood.label}</span>
-        </motion.button>
-      ))}
+      {MOODS.map((mood) => {
+        const isActive = activeMood === mood.key
+        return (
+          <motion.button
+            key={mood.key}
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ y: -2, scale: 1.04 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            onClick={() => setActiveMood(activeMood === mood.key ? null : mood.key)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-colors duration-200"
+            style={{
+              background: isActive ? mood.bg : 'rgba(255,255,255,0.04)',
+              border: isActive
+                ? `1px solid ${mood.border}`
+                : '1px solid rgba(255,255,255,0.07)',
+              color: isActive ? '#f4f4f5' : '#a1a1aa',
+              boxShadow: isActive
+                ? `0 0 14px ${mood.glow}, 0 0 32px ${mood.glow.replace('0.35', '0.12')}`
+                : 'none',
+              animation: isActive ? 'pulse-glow 2.5s ease-in-out infinite' : 'none',
+            }}
+          >
+            <motion.span
+              animate={isActive ? { rotate: [0, -8, 8, 0], scale: [1, 1.2, 1] } : {}}
+              transition={{ duration: 0.4 }}
+            >
+              {mood.emoji}
+            </motion.span>
+            <span>{mood.label}</span>
+          </motion.button>
+        )
+      })}
     </div>
   )
 }

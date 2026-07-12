@@ -7,12 +7,8 @@ import { toast } from 'react-hot-toast'
 import Badge from '../UI/Badge'
 
 const DOMAIN_COLORS = {
-  movies:   'purple',
-  books:    'blue',
-  music:    'green',
-  food:     'orange',
-  courses:  'gold',
-  products: 'red',
+  movies: 'purple', books: 'blue', music: 'green',
+  food: 'orange', courses: 'gold', products: 'red',
 }
 
 const DOMAIN_ICONS = {
@@ -21,8 +17,9 @@ const DOMAIN_ICONS = {
 
 export default function ItemCard({ item, showDomain = false, rank = null }) {
   const navigate = useNavigate()
-  const [bookmarked, setBookmarked] = useState(false)
+  const [bookmarked, setBookmarked]   = useState(false)
   const [isBookmarking, setIsBookmarking] = useState(false)
+  const [hovered, setHovered]         = useState(false)
 
   const handleBookmark = async (e) => {
     e.stopPropagation()
@@ -45,30 +42,45 @@ export default function ItemCard({ item, showDomain = false, rank = null }) {
     <motion.div
       whileHover={{ y: -6, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+      transition={{ type: 'spring', stiffness: 380, damping: 28 }}
+      onHoverStart={() => setHovered(true)}
+      onHoverEnd={() => setHovered(false)}
       onClick={() => navigate(`/item/${item.id}`)}
-      className="group relative bg-zinc-900 rounded-2xl overflow-hidden cursor-pointer
-                 border border-zinc-800 hover:border-violet-500/50
-                 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/10"
+      className="group relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+      style={{
+        background: 'rgba(255,255,255,0.025)',
+        border: hovered ? '1px solid rgba(139,92,246,0.35)' : '1px solid rgba(255,255,255,0.06)',
+        boxShadow: hovered
+          ? '0 20px 60px rgba(0,0,0,0.55), 0 0 30px rgba(139,92,246,0.1)'
+          : '0 4px 20px rgba(0,0,0,0.3)',
+      }}
     >
       {/* Rank badge */}
       {rank && (
-        <div className="absolute top-3 left-3 z-10 w-7 h-7 rounded-full bg-violet-600 flex items-center justify-center text-xs font-bold text-white shadow-lg">
+        <div
+          className="absolute top-3 left-3 z-10 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-lg"
+          style={{ background: 'linear-gradient(135deg, #7c3aed, #6d28d9)', boxShadow: '0 2px 12px rgba(124,58,237,0.5)' }}
+        >
           {rank}
         </div>
       )}
 
       {/* Bookmark */}
-      <button
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: hovered ? 1 : 0 }}
         onClick={handleBookmark}
-        className="absolute top-3 right-3 z-10 p-1.5 rounded-full bg-black/50 backdrop-blur-sm
-                   text-zinc-400 hover:text-violet-400 transition-colors opacity-0 group-hover:opacity-100"
+        className="absolute top-3 right-3 z-10 p-1.5 rounded-full text-zinc-400 hover:text-violet-400 transition-colors"
+        style={{ background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(8px)' }}
       >
-        {bookmarked ? <BookmarkCheck size={16} className="text-violet-400" /> : <Bookmark size={16} />}
-      </button>
+        {bookmarked
+          ? <BookmarkCheck size={16} className="text-violet-400" />
+          : <Bookmark size={16} />
+        }
+      </motion.button>
 
       {/* Poster */}
-      <div className="relative overflow-hidden bg-zinc-800 aspect-[2/3]">
+      <div className="relative overflow-hidden bg-zinc-900 aspect-[2/3]">
         <img
           src={item.poster_url || posterFallback}
           alt={item.title}
@@ -76,18 +88,28 @@ export default function ItemCard({ item, showDomain = false, rank = null }) {
           onError={(e) => { e.target.src = posterFallback }}
           loading="lazy"
         />
-        {/* Gradient overlay on hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-          <button className="w-full flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500
-                             text-white text-sm font-semibold py-2 rounded-xl transition-colors">
+
+        {/* Hover overlay */}
+        <motion.div
+          animate={{ opacity: hovered ? 1 : 0 }}
+          transition={{ duration: 0.2 }}
+          className="absolute inset-0 flex items-end p-3"
+          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }}
+        >
+          <button
+            className="w-full flex items-center justify-center gap-2 text-white text-sm font-semibold py-2 rounded-xl transition-all"
+            style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.9), rgba(99,102,241,0.85))', backdropFilter: 'blur(8px)' }}
+          >
             <Play size={14} fill="currentColor" /> View Details
           </button>
-        </div>
+        </motion.div>
 
         {/* Trending badge */}
         {item.is_trending && (
-          <div className="absolute top-3 left-3 bg-orange-500/90 backdrop-blur-sm text-white text-xs font-bold px-2 py-0.5 rounded-full">
+          <div
+            className="absolute top-3 left-3 text-white text-xs font-bold px-2 py-0.5 rounded-full"
+            style={{ background: 'rgba(249,115,22,0.85)', backdropFilter: 'blur(8px)' }}
+          >
             🔥 Trending
           </div>
         )}
@@ -106,7 +128,6 @@ export default function ItemCard({ item, showDomain = false, rank = null }) {
           )}
         </div>
 
-        {/* Genre & Year */}
         <div className="flex items-center gap-2 flex-wrap">
           {(item.genres?.[0] || item.genre) && (
             <Badge variant={DOMAIN_COLORS[item.domain] || 'zinc'} className="text-xs">
@@ -114,11 +135,10 @@ export default function ItemCard({ item, showDomain = false, rank = null }) {
             </Badge>
           )}
           {item.release_year && (
-            <span className="text-zinc-500 text-xs">{item.release_year}</span>
+            <span className="text-zinc-600 text-xs">{item.release_year}</span>
           )}
         </div>
 
-        {/* Rating & Duration */}
         <div className="flex items-center justify-between text-xs">
           <div className="flex items-center gap-1 text-yellow-400">
             <Star size={12} fill="currentColor" />
@@ -126,7 +146,7 @@ export default function ItemCard({ item, showDomain = false, rank = null }) {
             <span className="text-zinc-600">({item.total_ratings})</span>
           </div>
           {item.duration && (
-            <div className="flex items-center gap-1 text-zinc-500">
+            <div className="flex items-center gap-1 text-zinc-600">
               <Clock size={10} />
               <span>{item.duration}</span>
             </div>
